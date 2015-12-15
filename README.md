@@ -32,6 +32,28 @@ html(
         div(ui-view="dialog")
 ```
 
+Add the controller to your ui-router
+
+```coffee
+angular.module('my_app')
+  .config (
+    $stateProvider
+    $urlRouterProvider
+  ) ->
+    $stateProvider.state 'root',
+      abstract: true
+      url: '/'
+
+      views:
+        'dialog@':
+          controller: 'dialogCtrl'
+          templateUrl: 'dialog/template/dialog.html'
+
+        'toaster@':
+          controller: 'toasterCtrl'
+          templateUrl: 'toaster/template/toaster.html'
+```
+
 ## Prompt Dialog
 
 Prompt user for an input
