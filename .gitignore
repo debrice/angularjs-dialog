@@ -1,0 +1,11 @@
+*.swp
+*.swo
+*.*~
+*.log
+.*
+*.vim
+
+node_modules/
+bower_components/
+build/
+test/config.spec.coffee
