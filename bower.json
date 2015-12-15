@@ -1,0 +1,26 @@
+{
+  "name": "angularjs-dialog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/debrice/angularjs-dialog",
+  "authors": [
+    "Brice Leroy <bbrriiccee@gmail.com>"
+  ],
+  "description": "A dialog service for angular JS web application",
+  "main": "dist/dialog.js",
+  "keywords": [
+    "dialog",
+    "angular",
+    "angularjs"
+  ],
+  "dependencies": {
+    "lodash": "~3.8.0"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

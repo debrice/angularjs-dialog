@@ -1,0 +1,31 @@
+div(ng-if = "dialog.visible")
+  .modal-overlay(
+    ng-keypress = "keyPressEvent($event)"
+  )
+    .modal.mini-table.modal-dialog
+      .modal-body
+        form
+          p.dialog-text {{ dialog.text }}
+          p(ng-if="dialog.type === 'PROMPT'")
+            input(
+              type = "text"
+              ng-model = "dialog.prompt_data"
+              auto-focus
+            )
+          .form-actions
+            button.button.right.inline.primary(
+              ng-class = "{expand: dialog.type === 'ALERT'}"
+              ng-click = "deferred.resolve(dialog.prompt_data)"
+            ) {{ dialog.call_to_action }}
+
+            button.button.right.inline(
+              ng-if = "dialog.type === 'CONFIRM' || dialog.type === 'PROMPT'"
+              ng-click = "deferred.reject()"
+            ) Cancel
+
+      .modal-dialog-footer-note
+        | press
+        strong &nbsp;ENTER
+        |  to confirm or
+        strong &nbsp;ESC
+        |  to dismiss
