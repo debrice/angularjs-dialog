@@ -37,7 +37,7 @@ html(
 Prompt user for an input
 
 ```coffee
-angular.module('my_app').directive 'myController',
+angular.module('my_app').controller 'myController',
     (
         dialogService
     ) ->
@@ -58,7 +58,7 @@ angular.module('my_app').directive 'myController',
 Inform the user, only
 
 ```coffee
-angular.module('my_app').directive 'myController',
+angular.module('my_app').controller 'myController',
     (
         dialogService
     ) ->
@@ -78,7 +78,7 @@ click the call to action, the promise is resolved, otherwise it is
 rejected
 
 ```coffee
-angular.module('my_app').directive 'myController',
+angular.module('my_app').controller 'myController',
     (
         myObjectService
         dialogService
